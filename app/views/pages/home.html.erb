@@ -17,13 +17,14 @@
 				</ul>
             </div>
 		</div>
-		<% @products.each do |product| %>
+
 			<div class="col-sm-9">
 				<div class="container">
 					<div class="row">
+					<% @products.each do |product| %>
 						<div class="col-sm-4 card-style">	
 							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
+							  <img src="<%= cl_image_path product.photo.key, height: 300, width: 400, crop: :fill %>" class="card-img-top" alt="...">
 							  <div class="card-body">
 							    <h5 class="card-title"><%= product.title %></h5>
 							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
@@ -121,9 +122,9 @@
 							  </div>
 							</div>
 						</div>
+						<% end %>
 					</div>
 				</div>
 			</div>
-		<% end %>
 	</div>
 </div>
