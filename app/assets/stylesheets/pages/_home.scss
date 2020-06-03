@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+.card {
+	margin: 10px 0px;
+}
+
+.active-cyan-2 input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan input[type=text] {
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+.active-cyan .fa, .active-cyan-2 .fa {
+  color: #4dd0e1;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+ul li {
+	font-size: 20px;
+}
+
+#grad {
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(82,191,185,1) 0%, rgba(59,196,98,1) 50%, rgba(79,252,69,1) 100%);
+}
