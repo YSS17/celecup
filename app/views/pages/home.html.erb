@@ -24,104 +24,22 @@
 					<% @products.each do |product| %>
 						<div class="col-sm-4 card-style">	
 							<div class="card">
-							  <img src="<%= cl_image_path product.photo.key, height: 300, width: 400, crop: :fill %>" class="card-img-top" alt="...">
+
+								<% if product.photo.attached? %>
+									<%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill, class:"card-img-top" %>
+								<% else %>
+									<div class="card-img-top">
+										<img src="<%= image_path("logo.png") %>" class="card-img-top" style="height: 120px; margin-top: 80px;" alt="...">
+									</div>
+								<% end %>
 							  <div class="card-body">
 							    <h5 class="card-title"><%= product.title %></h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
+							    <p class="card-text">Descrição do copo.</p>
 							    <a href="#" class="btn btn-primary">Go somewhere</a>
 							  </div>
 							</div>
 						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-4">	
-							<div class="card">
-							  <img src="https://http2.mlstatic.com/copo-iluminado-red-bull-rock-in-rio-2019-D_NQ_NP_984165-MLB32599455481_102019-F.jpg" class="card-img-top" alt="...">
-							  <div class="card-body">
-							    <h5 class="card-title">Copo rock in rio</h5>
-							    <p class="card-text">Vendo esse copo comprado no Rock In Rio 2010.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-							  </div>
-							</div>
-						</div>
+						
 						<% end %>
 					</div>
 				</div>
