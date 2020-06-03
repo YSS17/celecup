@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
     @product = Product.new(params[:product])
     @product.user_id = current_user.id
     @product.save
-    redirect_to product_path(@product)
+    redirect_to root_path
   end
 
   def new
