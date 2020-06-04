@@ -7,15 +7,6 @@
 			    aria-label="Search">
 			  <i class="fas fa-search" aria-hidden="true"></i>
 			</form>
-			<div>
-				<ul>
-					<li>Shows</li>
-					<li>Cinemas</li>
-					<li>Festivais</li>
-					<li>Cervejadas</li>
-					<li>Outros</li>
-				</ul>
-            </div>
 		</div>
 
 			<div class="col-sm-9">
@@ -33,9 +24,8 @@
 									</div>
 								<% end %>
 							  <div class="card-body">
-							    <h5 class="card-title"><%= product.title %></h5>
-							    <p class="card-text">Descrição do copo.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
+							    <h5 class="card-title text-center"><%= product.title %></h5>
+							    <a href="<%= product_path(product.id) %>" class="btn btn-primary d-flex justify-content-center">Show more!</a>
 							  </div>
 							</div>
 						</div>
