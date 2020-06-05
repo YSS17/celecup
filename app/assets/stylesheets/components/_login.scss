@@ -11,10 +11,19 @@
 }
 
 .sign-up:hover {
-  color: green;
+  color: green (11, 128, 0);
   transform: scale(1.2);
 }
 
 .login-page {
   height: 75vh;
+}
+
+.login-btn {
+  background-color: #a6a1f0;
+  font-style: normal;
+}
+
+.login-btn:hover {
+  background-color: rgba(#a6a1f0, 0.8) ;
 }
