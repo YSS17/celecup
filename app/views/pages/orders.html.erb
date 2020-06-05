@@ -1,0 +1,25 @@
+<div class="container" style="height: 85vh;">
+	<div class="container">
+
+	</div>
+	<div class="container" style="height: 85%; padding-top: 20px;">
+		<a>Listagem das minhas compras</a>
+		  <div class="cards">
+			<% @orders.each do |order| %>
+				<div class="card">
+				   <div class="card-img-top">
+					<% if order.product.photo.attached? %>
+						<%= cl_image_tag order.product.photo.key, height: 300, width: 400, crop: :fill, class:"card-img-top" %>
+					<% else %>
+						<img src="<%= image_path("logo.png") %>" class="card-img-top" style="height: 120px; margin-top: 80px;" alt="...">
+			        <% end %>
+					    </div>
+					<div class="card-body">
+						    <h5 class="card-title text-center"><%= order.product.title %></h5>
+						    <a href="<%= product_path(order.product.id) %>" class="btn btn-primary d-flex justify-content-center">Show more!</a>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
