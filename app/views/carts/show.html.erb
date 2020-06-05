@@ -1,0 +1,19 @@
+<div class="container">
+<h1>Você comprou <%= @cart.product.title %></h1>
+  <div class="card-product">
+   <% if @cart.product.photo.attached? %>
+            <img class="card-img-top" style="height: 50vh; " src="<%= cl_image_path @cart.product.photo.key %>" alt="">
+          <% else %>
+            <img src="<%= image_path("logo.png") %>" class="card-img-top" style="height: 120px; margin-top: 80px;" alt="...">
+        <% end %>
+  <div class="card-product-infos">
+    <h3 class="card-title"><%= @cart.product.title %></h3>
+    <h4 class="card-product-price">R$ <%= @cart.product.price %></h4>
+    <h6><%= @cart.product.description %></h6>
+    <p>Produto comprado em :<%=  %></p>
+  </div>
+</div>
+</div>
+
+
+

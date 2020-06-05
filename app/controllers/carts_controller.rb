@@ -5,6 +5,10 @@ class CartsController < ApplicationController
     @cart.product = @product
     @cart.user = current_user
     @cart.save
-    redirect_to products_path
+    redirect_to @cart
+  end
+
+  def show
+    @cart = Cart.find(params[:id])
   end
 end

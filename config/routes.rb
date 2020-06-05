@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :products do
     resources :carts, only: [:create]
   end
+  resources :carts, only: [:show]
 end
