@@ -1,0 +1,27 @@
+<div class="container" style="height: 85vh;">
+	<div class="container">
+	  <ul>
+	    <li><a href="<%= edit_user_registration_path(current_user.id) %>">Editar perfil</a></li>
+	  </ul>
+	</div>
+	<div class="container" style="height: 85%; padding-top: 20px;">
+		<a>Listagem dos meus produtos</a>
+		  <div class="cards">
+			<% @product.each do |product| %>
+				<div class="card">
+				   <div class="card-img-top">
+					<% if product.photo.attached? %>
+						<%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill, class:"card-img-top" %>
+					<% else %>
+						<img src="<%= image_path("logo.png") %>" class="card-img-top" style="height: 120px; margin-top: 80px;" alt="...">
+			        <% end %>
+					    </div>
+					<div class="card-body">
+						    <h5 class="card-title text-center"><%= product.title %></h5>
+						    <a href="<%= product_path(product.id) %>" class="btn btn-primary d-flex justify-content-center">Show more!</a>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
