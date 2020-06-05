@@ -1,0 +1,6 @@
+<%= simple_form_for [ @product, @order ] do |f| %>
+  <%= f.input :quantity %>
+  <%= f.submit "Submit checkout ", class: "btn btn-primary" %>
+<% end %>
+
+
