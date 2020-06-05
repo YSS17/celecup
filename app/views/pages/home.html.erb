@@ -2,12 +2,11 @@
 	<div class="row">
 		<div class="col-sm-3">
 			<h1>Categorias</h1>
-			<form class="form-inline active-cyan-4">
-			  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-			    aria-label="Search">
-			  <i class="fas fa-search" aria-hidden="true"></i>
-			</form>
-		</div>
+      <%= form_tag root_path, method: :get do %>
+      <%= select_tag :query, options_for_select(@categories), include_blank: true, class: "form-control"%>
+      <%= submit_tag "Search ", class: "btn btn-primary" %>
+      <% end %>
+		  </div>
 
 			<div class="col-sm-9">
 				<div class="container">
