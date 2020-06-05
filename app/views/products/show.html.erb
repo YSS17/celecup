@@ -21,12 +21,16 @@
           <div class="options d-flex flex-fill">
           <p>In stock: </p><%= @product.quantity %>
           </div>
-          <div class="buy d-flex justify-content-between align-items-center">
+          <div>
             <div class="price text-success"><h5 class="mt-4">R$:<%=@product.price%></h5></div>
-             <a href="#" class="btn btn-danger mt-3"><i class="fas fa-shopping-cart"></i> Add to cart!</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+ <%= simple_form_for [@product, @cart] do |f|%>
+              <%= f.submit "add cart", class: "btn btn-primary"%>
+            <%end%>
